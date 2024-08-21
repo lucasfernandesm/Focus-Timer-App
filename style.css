@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%,1% + 2vw,62.5%);
+
+    --app-bg: #121214;
+    --timer-menu-bg : #242424;
+    --timer-text: #F8F8FC;
+    --toggle-mode-color: #F8F8FC;
+    --primary-color: #42D3FF;
+    --secondary-color: #F8F8FC;
+}
+
+html.light-mode {
+    --app-bg: #F8F8FC;
+    --timer-text: #121214;
+    --toggle-mode-color: #121214;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.app {
+    background-color: var(--app-bg);
+
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+
+.app #toggle-mode {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 3.2rem;
+    right: 3.2rem;
+
+    font-size: 3.2rem;
+    color: var(--toggle-mode-color);
+}
+
+.timer {
+    display: flex;
+
+    font-size: 9.6rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: var(--timer-text);
+}
+
+.timer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+
+    padding: 2.2rem 4rem;
+    margin-top: 1.6rem;
+
+    border-radius: 999rem;
+
+    background: var(--timer-menu-bg);
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+
+    font-size: 6.4rem;
+    color: var(--primary-color);
+
+    cursor: pointer;
+}
+
+.secondary {
+    color: var(--secondary-color)
+} 
+
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high 
+{
+    display: none;
+}
+
+.light-mode .ph-sun,
+html:not(.light-mode) .ph-moon 
+{
+    display: none;
+}
