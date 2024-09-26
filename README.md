@@ -40,6 +40,7 @@ This project was developed with the following technologies:
   - When the time is up, a siren sounds to indicate the end </br>
   - You can activate and deactivate a song that plays in a loop, helping with concentration </br>
   - It has light mode and dark mode that can be switched by clicking on the icon in the top right corner of the screen </br>
+  - Responsive design, capable of adapting to different screen sizes, better user experience </br>
   - Project developed during the Full-stack Training course via the platform [Rocketseat](https://app.rocketseat.com.br) </br>
 
 <br><br>
